@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>{$title}</title>
+<script language="JavaScript">
+function fleshVerify(){
+    //重载验证码
+    var time = new Date().getTime();
+        document.getElementById('verifyImg').src= '__URL__/verify/'+time;
+}
+</script>
+</head>
+<body>
+<br /></p>
+{$content}
+<p>PS：建议使用jQuery formValidator表单验证插件</p>
+<FORM method="post" action="__URL__/insert">
+用户名：<INPUT type="text" name="username"><br/>
+密 码： <INPUT type="password" name="password"><br/>
+确 认： <INPUT type="password" name="repassword"><br/>
+邮 箱： <INPUT type="text" name="email"><br/>
+验证码：<input type="text" name="verify"><img src="__URL__/verify/" id="verifyImg" title="点击刷新验证码" onclick="fleshVerify()"/><br/>
+<INPUT type="submit" value="提交注册">
+
+</div>
+</FORM>
+<p><br /></p>
+</body>
+</html>
