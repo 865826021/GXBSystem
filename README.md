@@ -4,7 +4,7 @@
 
 ## 声明 ##
 
-该软件版权归属于沈阳晨信网络科技有限公司(http://www.echenxin.com)，其遵循LGPL 3.0协议。您可以用来学习与二次开发，甚至用于商业用途。但不得将基于该软件开发的产品进行闭源。具体协议规范请参见LGPL 3.0(http://opensource.org/licenses/lgpl-3.0.html)。
+该软件版权归属于沈阳晨信网络科技有限公司( http://www.echenxin.com )，其遵循LGPL 3.0协议。您可以用来学习与二次开发，甚至用于商业用途。但不得将基于该软件开发的产品进行闭源。具体协议规范请参见LGPL 3.0( http://opensource.org/licenses/lgpl-3.0.html )。
 
 ## 付费服务 ##
 

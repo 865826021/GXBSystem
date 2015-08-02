@@ -34,11 +34,11 @@ return array (
         '__PUBLIC__'  => __ROOT__ . '/Static/Web',
         '__STATIC__'  => __ROOT__ . '/Static/Web',
     ),
-  'UPLOAD_DIR' =>  'Upload/Web/Admin/',
-  'cms_name' => '后台管理系统',
+  'UPLOAD_DIR' =>  'Upload/Web/Admin/', 
+  'cms_name' => '晨信后台管理系统',
   'cms_url' => 'http://www.echenxin.com',
   'cms_var' => '0.0.1',
-  'end_year' => '2013',
+  'end_year' => '2015',
   'cms_admin' => 'index.php',
 );
 ?>
