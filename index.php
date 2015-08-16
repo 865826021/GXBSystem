@@ -1,6 +1,6 @@
 <?php
 /**
- * GXBSystem - 基于ThinkPHP3.1.3的后台基础框架
+ * GXBSystem - 基于ThinkPHP3.1.3的后台基础框架.
  *
  * WEB层入口文件。
  *
