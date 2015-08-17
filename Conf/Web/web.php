@@ -5,7 +5,7 @@ return  array (
     
     'DB_TYPE'             => 'mysql',
     'DB_HOST'             => 'localhost',
-    'DB_NAME'             => 'tongxinren',
+    'DB_NAME'             => 'gxbsystem',
     'DB_USER'             => 'root',
     'DB_PWD'              => '1B09f28b',
     'DB_PORT'             => 3306,
@@ -22,8 +22,8 @@ return  array (
     'SMTP_AUTH'           => 1,
      
     'WEB_NAME'            => '晨信后台管理系统',
-    'WEB_URL'             => 'http://tongxinren.echenxin.com/',
-    'WEB_PATH'            => '/var/www/html/tongxinren.echenxin.com/',
+    'WEB_URL'             => 'http://gxbsystem.echenxin.com/',
+    'WEB_PATH'            => '/var/www/html/gxbsystem.echenxin.com/',
     'WEB_ICP'             => '',
     'WEB_COPYRIGHT'       => 'Copyright 2014-2015. <a href="http://www.echenxin.com">沈阳晨信网络科技有限公司</a>',
     'WEB_TONGJI'          => '',
