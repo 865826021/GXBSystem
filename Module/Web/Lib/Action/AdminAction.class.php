@@ -109,7 +109,7 @@ abstract class AdminAction extends CmsAction{
         if(!$id) $this->error(L('PARAM') . L('ERROR'));
         $info       = $model->where(array('id' => $id))->find();
         $this->assign('tpltitle',L('EDIT'));
-        $this->_after_edit($info,array('id' => $id));
+        $this->_after_edit($info, array('id' => $id));
         $this->assign('info',$info);
         $this->display('edit');
     }
@@ -132,10 +132,48 @@ abstract class AdminAction extends CmsAction{
     
     protected function _after_add(& $data, $option) {}
     
+    /**
+     * 更新操作前处理函数.
+     *
+     * @version 0.0.1
+     * @since   0.1.0
+     *
+     * @author  GenialX
+     */
     protected function _before_update() {}
     
-    public function update() {}
+    /**
+     * 更新操作处理函数.
+     *
+     * @version 0.0.1
+     * @since   0.1.0
+     *
+     * @author  GenialX
+     */
+    public function update() {
+        $this->_before_update();
+        $model = $this->_getModel();
+        if ($model->create()) {
+            $list = $model->save();
+            $this->_after_update();
+            if ($list == true) {
+                $this->success(L('DATA') . L('UPDATE') . L('SUCCESS'), U('/Admin/' . MODULE_NAME . '/index'));
+            } else {
+                $this->error(L('NO') . L('ANY') . L('DATA') . L('UPDATE'));
+            }
+        } else {
+            $this->error($model->getError());
+        }
+    }
     
+    /**
+     * 更新操作后处理函数.
+     *
+     * @version 0.0.1
+     * @since   0.1.0
+     *
+     * @author  GenialX
+     */
     protected function _after_update() {}
     
     protected function _before_insert() {}

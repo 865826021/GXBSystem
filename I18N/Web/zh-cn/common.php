@@ -10,5 +10,9 @@ return array(
     'UPDATE' => '更新',
     'EDIT' => '修改',
     'SEARCH' => '查找',
-    
+    'DATA' => '数据',
+    'NO' => '没有',
+    'ANY' => '任何',
+    'PASSWORD' => '密码',
+    'FORMAT' => '格式',
 );
