@@ -14,6 +14,12 @@
  * 后台登陆模块
  */
 class LoginAction extends AdminAction{
+    
+    public function _initialize() {
+        parent::_initialize();
+        C('TOKEN_ON', true);
+    }
+    
     //登陆界面
     public function index(){
     	//检测后台登录入口是否正确

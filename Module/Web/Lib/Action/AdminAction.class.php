@@ -9,9 +9,31 @@
  */
 abstract class AdminAction extends CmsAction{
     
-    // 过滤条件数组
+    /**
+     * 条件参数数组.
+     * 
+     * 一般用在查询时的条件。
+     * 
+     * @version     0.0.1
+     * @since       0.1.0
+     * @author      GenialX     <admin@ihuxu.com>
+     * 
+     * @var         array
+     */
     protected $_filterMap = array();
     
+    /**
+     * 初始化.
+     * 
+     * @version 0.0.1
+     * @since   0.0.1
+     * 
+     * @see CmsAction::_initialize()
+     * 
+     * @author  水木清华   <admin@4u4v.net>
+     * 
+     * @return  void
+     */
     public function _initialize(){
         parent::_initialize();
         // 后台用户权限检查
@@ -44,7 +66,9 @@ abstract class AdminAction extends CmsAction{
      * @version 0.0.1
      * @since   0.1.0
      *
-     * @author  GenialX
+     * @author  GenialX <admin@ihuxu.com>
+     * 
+     * @return  void
      */
     protected function _before_index() {}
     
@@ -54,7 +78,9 @@ abstract class AdminAction extends CmsAction{
      * @version 0.0.1
      * @since   0.1.0
      * 
-     * @author  GenialX
+     * @author  GenialX <admin@ihuxu.com>
+     * 
+     * @return  void
      */
     public function index() {
         $this->_before_index();
@@ -80,7 +106,9 @@ abstract class AdminAction extends CmsAction{
      * @version 0.0.1
      * @since   0.1.0
      *
-     * @author  GenialX
+     * @author  GenialX <admin@ihuxu.com>
+     * 
+     * @return  void
      */
     protected function _after_index(& $data, $option) {}
     
@@ -90,7 +118,9 @@ abstract class AdminAction extends CmsAction{
      * @version 0.0.1
      * @since   0.1.0
      *
-     * @author  GenialX
+     * @author  GenialX <admin@ihuxu.com>
+     * 
+     * @return  void
      */
     protected function _before_edit() {}
     
@@ -100,7 +130,9 @@ abstract class AdminAction extends CmsAction{
      * @version 0.0.1
      * @since   0.1.0
      *
-     * @author  GenialX
+     * @author  GenialX <admin@ihuxu.com>
+     * 
+     * @return  void
      */
     public function edit() {
         $this->_before_edit();
@@ -120,7 +152,9 @@ abstract class AdminAction extends CmsAction{
      * @version 0.0.1
      * @since   0.1.0
      *
-     * @author  GenialX
+     * @author  GenialX <admin@ihuxu.com>
+     * 
+     * @return  void
      */
     protected function _after_edit(& $data, $option) {}
     
