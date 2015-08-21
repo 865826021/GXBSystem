@@ -210,10 +210,48 @@ abstract class AdminAction extends CmsAction{
      */
     protected function _after_update() {}
     
+    /**
+     * 插入前处理函数.
+     *
+     * @version 0.0.1
+     * @since   0.1.0
+     *
+     * @author  GenialX
+     */
     protected function _before_insert() {}
     
-    public function insert() {}
+    /**
+     * 插入操作.
+     *
+     * @version 0.0.1
+     * @since   0.1.0
+     *
+     * @author  GenialX
+     */
+    public function insert() {
+        $this->_before_index();
+        $model = $this->_getModel();
+        if ($model->create()) {
+            $list = $model->add();
+            $this->_after_index($list, array());
+            if ($list) {
+                $this->success(L('DATA') . L('ADD') . L('SUCCESS'), U('/Admin/' . MODULE_NAME . '/index'));
+            } else {
+                $this->error(L('DATA') . L('ADD') . L('FAIL'));
+            }
+        } else {
+            $this->error($model->getError());
+        }
+    }
     
+    /**
+     * 插入后处理函数.
+     *
+     * @version 0.0.1
+     * @since   0.1.0
+     *
+     * @author  GenialX
+     */
     protected function _after_insert() {}
     
     protected function _before_delete() {}
