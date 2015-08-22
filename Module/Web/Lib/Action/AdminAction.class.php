@@ -254,9 +254,36 @@ abstract class AdminAction extends CmsAction{
      */
     protected function _after_insert() {}
     
+    /**
+     * 删除前处理函数.
+     *
+     * @version 0.0.1
+     * @since   0.1.0
+     *
+     * @author  GenialX
+     */
     protected function _before_delete() {}
     
-    public function delete() {}
+    /**
+     * 删除函数.
+     *
+     * @version 0.0.1
+     * @since   0.1.0
+     *
+     * @author  GenialX
+     */
+    public function delete() {
+        $this->_before_delete();
+        $id     = $this->_get('id','intval',0);
+        if(! $id) $this->error(L('PARAM') . L('ERROR'));
+        $model = $this->_getModel();
+        if($model->where(array('id' => $id))->delete()){
+            $this->assign("jumpUrl",U('/Admin/' . MODULE_NAME . '/index'));
+            $this->success(L('DELETE') . L('SUCCESS'));
+        }else{
+            $this->error($model->getError());
+        }
+    }
     
     protected function _after_delete() {}
     

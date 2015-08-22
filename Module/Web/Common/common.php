@@ -1,15 +1,10 @@
 <?php
-
-// +----------------------------------------------------------------------
-// | ThinkPHP通用后台管理系统
-// +----------------------------------------------------------------------
-// | Copyright (c) 2013 www.4u4v.net All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: 水木清华 <admin@4u4v.net>
-// +----------------------------------------------------------------------
-
+/**
+ * 公用函数库.
+ * 
+ * @author 水木清华 <admin@4u4v.net>
+ * @autor  GenialX <admin@ihuxu.com>
+ */
 
 // 数组保存到文件
 function arr2file($filename, $arr=''){
@@ -160,4 +155,19 @@ function get_letter($s0){
 	if($asc>=-11847 and $asc<=-11056)return "Y";
 	if($asc>=-11055 and $asc<=-10247)return "Z";
 	return 0;
+}
+
+function p($v, $exit = false) {
+    echo "<pre>" . print_r($v, true) . "</pre>";
+    $exit && exit;
+}
+
+function print_stack(Exception $e, $exit = false) {
+    echo "Message: " . $e->getMessage() . " Code:" . $e->getCode() . "<br />\n";
+    echo "In file " . $e->getFile() . " on line " . $e->getLine() . "<br />\n";
+    $trace = $e->getTrace();
+    foreach($trace as $k => $v) {
+        echo "#{$k}: {$v['file']} line {$v['line']} {$v['class']}{$v['type']}{$v['function']}({$v['args']}) <br />\n"; 
+    }
+    $exit && exit;
 }

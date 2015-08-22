@@ -15,4 +15,7 @@ return array(
     'ANY' => '任何',
     'PASSWORD' => '密码',
     'FORMAT' => '格式',
+    'LOGIN' => '登录',
+    'JUMPING' => '正在跳转',
+    'LOGGEDIN' => '已经登录',
 );
